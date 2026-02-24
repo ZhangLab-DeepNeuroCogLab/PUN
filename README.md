@@ -23,9 +23,9 @@ The following datasets are used in our experiments:
 <div align=left><img src="data/figures/Fig2.png" width="99%" height="99%" ></div>  
 
 To generate NUM dataset from scratch:
-1. please follow the installation instructions of [splatter-image](https://github.com/szymanowiczs/splatter-image)
+1. please follow the installation instructions of [splatter-image](https://github.com/szymanowiczs/splatter-image).
 2. replace `shapenet_path` and `output_path` in `fep_nbv/uncertainty_map_generation/single_rotation_generation.py` with `/path/to/ShapeNet` and `/path/to/NUM`.
-3. replace **[Neural Uncertainty Map](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py`  with `/path/to/ShapeNet` and `/path/to/NUM`. Adjust `included_category` in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py` to specify which object categories to process.
+3. replace `shapenet_path` and `output_path` in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py`  with `/path/to/ShapeNet` and `/path/to/NUM`. Adjust `included_category` in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py` to specify which object categories to process.
 4. Update `server_config.json` to march your computing environment.
 5. run 
 ```bash
@@ -39,9 +39,9 @@ python fep_nbv/uncertainty_map_generation/parralized_distribution_generation_spl
 This repository depends on **NVF**, **Splatter-image** and **Nerfstudio**.  
 Please follow the official NVF installation instructions:
 
-1. install [nvf](https://github.com/GaTech-RL2/nvf_cvpr24.git)
+1. install [nvf](https://github.com/GaTech-RL2/nvf_cvpr24.git).
 
-2. install other dependency
+2. install other dependency.
     pip install -r requirements.txt
 
 3. install [splatter-image](https://github.com/szymanowiczs/splatter-image) to generate the NUM dataset locally.
@@ -81,8 +81,8 @@ python test_train.py --vit_used vit_small_patch16_224 --epochs 100 --batch_size 
 
 ### visualization
 To visualize the uncertain map predicted by UPNet
-1. adjust `NUM_path` and `model_path` in `08-vit-train/visualize_predicted_uncertainty.py`
-2. 
+1. adjust `NUM_path` and `model_path` in `08-vit-train/visualize_predicted_uncertainty.py`.
+2. run
 ```bash
 cd 08-vit-train
 python visualize_predicted_uncertainty.py
