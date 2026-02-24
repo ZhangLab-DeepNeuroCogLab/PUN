@@ -2,7 +2,7 @@
 
 This repository provides the **official implementation** of **_Peering into the Unknown: Active View Selection with Neural Uncertainty Maps for 3D Reconstruction_**.
 
-## [Paper](https://arxiv.org/pdf/2506.14856) | [Dataset](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing) | [Models](https://drive.google.com/drive/folders/1SmAq_RmEDKGDYT-rVy7YBnEmewmOBIRW?usp=share_link) | [Poster](https://drive.google.com/drive/folders/1SmAq_RmEDKGDYT-rVy7YBnEmewmOBIRW?usp=share_link) | Presentation *(coming soon)*
+## [Paper](https://arxiv.org/pdf/2506.14856) | [Dataset](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing) | [Models](https://drive.google.com/drive/folders/1SmAq_RmEDKGDYT-rVy7YBnEmewmOBIRW?usp=share_link) | [Poster](https://drive.google.com/file/d/1qA3WS7Z3KPYxNYwlfsfKqLNi5yddjg9Q/view?usp=share_link) | Presentation *(coming soon)*
 
 
 ## Abstract
