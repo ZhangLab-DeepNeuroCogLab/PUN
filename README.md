@@ -18,7 +18,7 @@ The following datasets are used in our experiments:
 
 - **[ShapeNet](https://shapenet.org)** (Download it and place it at /path/to/ShapeNet)
 - **NeRF Synthetic Dataset** (data/assets/blend_files)
-- **[Neural Uncertainty Map](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** (Download it and place it at /path/to/NUM)
+- **[Neural Uncertainty Map (NUM) Dataset](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** (Download it and place it at /path/to/NUM)
 
 <div align=left><img src="figures/Fig2.png" width="99%" height="99%" ></div>  
 
@@ -26,7 +26,7 @@ To generate NUM dataset from scratch:
 1. please follow the installation instructions of [splatter-image](https://github.com/szymanowiczs/splatter-image).
 2. replace `shapenet_path` and `output_path` in `fep_nbv/uncertainty_map_generation/single_rotation_generation.py` with `/path/to/ShapeNet` and `/path/to/NUM`.
 3. replace `shapenet_path` and `output_path` in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py`  with `/path/to/ShapeNet` and `/path/to/NUM`. Adjust `included_category` in `fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py` to specify which object categories to process.
-4. Update `server_config.json` to march your computing environment.
+4. Update `server_config.json` to match your computing environment.
 5. run 
 ```bash
 python fep_nbv/uncertainty_map_generation/parralized_distribution_generation_splited_shapenet.py
@@ -73,7 +73,7 @@ python fep_nbv/baseline/our_policy_single.py --vit_ckpt_path vit_small_patch16_2
 python fep_nbv/baseline/our_policy_single.py --vit_ckpt_path vit_small_patch16_224_PSNR_250425172703 --model_3d_path data/shapenet/instance_example/02691156/1a04e3eab45ca15dd86060f189eb133
 ```
 
-To train a UPNet using NUM dataset, download the **[Neural Uncertainty Map](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** dataset and put it in data/NUM_example.
+To train a UPNet using NUM dataset, download the **[Neural Uncertainty Map (NUM) Dataset](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** dataset and put it in data/NUM_example.
 ```bash
 cd 08-vit-train
 python test_train.py --vit_used vit_small_patch16_224 --epochs 100 --batch_size 32 --lr 1e-4 --uncertainty_mode PSNR --dataset_path data/NUM_example
