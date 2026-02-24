@@ -55,3 +55,15 @@ def xyz2polar(x,y,z):
 
     return azimuth, elevation
 
+def to_transform(pose):
+    """Convert quaternion & translation vector into transformation matrix"""
+    transform = quat_to_rot_transform_torch(pose)
+
+    # zzq version
+    r = R.from_quat(pose[:4].cpu())
+    transpose = torch.eye(4)
+    transpose[:3,:3] = torch.tensor(r.as_matrix()) # type: ignore
+    transpose[:3,3] = pose[4:]
+
+
+    return transform

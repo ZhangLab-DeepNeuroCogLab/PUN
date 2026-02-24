@@ -224,3 +224,24 @@ def index2pose_HEALPix(index,n_side=2,radius=2):
     poses = generate_HEALPix_viewpoints(n_side)
     return poses[index]
 
+def pose_from_xyz(xyz,original_viewpoint=np.array([0,0,1]), offset_phi=0):
+    # input xyz numpy  13 
+    points = rotate_to_target(xyz, np.array([0, 0, 1]))
+    points = rotate_around_z(points, offset_phi)
+    points = rotate_to_target(points, original_viewpoint)
+
+    # **重置旋转到默认朝向**
+    poses = xyz2pose(points[:, 0], points[:, 1], points[:, 2])
+    default_quat = poses[0,:4]
+
+    # **绕轴旋转**
+    rotation_axis = -torch.tensor([1,0,0])
+    cos_half_angle = torch.cos(torch.tensor(offset_phi)  / 2)
+    sin_half_angle = torch.sin(torch.tensor(offset_phi) / 2)
+    rotation_quat = torch.tensor([cos_half_angle, *(sin_half_angle * rotation_axis)])
+    q_0 = quaternion_multiply(rotation_quat, poses[0,:4])
+
+    # 更新 pose
+    poses[0, :4] = torch.tensor(q_0)
+
+    return poses
