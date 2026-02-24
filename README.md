@@ -10,7 +10,7 @@ Imagine trying to understand the shape of a teapot by viewing it from the frontâ
 Instead of learning radiance fields, like NeRF or 3D Gaussian Splatting, from a current observation and computing uncertainty for each candidate viewpoint, we introduce a novel AVS approach guided by neural uncertainty maps predicted by a lightweight feedforward deep neural network, named UPNet. 
 UPNet takes a single input image of a 3D object and outputs a predicted uncertainty map, representing uncertainty values across all possible candidate viewpoints. By leveraging heuristics derived from observing many natural objects and their associated uncertainty patterns, we train UPNet to learn a direct mapping from viewpoint appearance to uncertainty in the underlying volumetric representations. 
 Next, our approach aggregates all previously predicted neural uncertainty maps to suppress redundant candidate viewpoints and effectively select the most informative one. Using these selected viewpoints, we train 3D neural rendering models and evaluate the quality of novel view synthesis against other competitive AVS methods. Remarkably, despite using half of the viewpoints than the upper bound, our method achieves comparable reconstruction accuracy. In addition, it significantly reduces computational overhead during AVS, achieving up to a 400 times speedup along with over 50\% reductions in CPU, RAM, and GPU usage compared to baseline methods. Notably, our approach generalizes effectively to AVS tasks involving novel object categories, without requiring any additional training. 
-<div align=left><img src="data/figures/Fig1.png" width="99%" height="99%" ></div>  
+<div align=left><img src="figures/Fig1.png" width="99%" height="99%" ></div>  
 
 ## Dataset
 
@@ -20,7 +20,7 @@ The following datasets are used in our experiments:
 - **NeRF Synthetic Dataset** (data/assets/blend_files)
 - **[Neural Uncertainty Map](https://drive.google.com/drive/folders/1Eki_n8Tk2Y-52_zRSOphTPdJD2ESd8Hl?usp=sharing)** (Download it and place it at /path/to/NUM)
 
-<div align=left><img src="data/figures/Fig2.png" width="99%" height="99%" ></div>  
+<div align=left><img src="figures/Fig2.png" width="99%" height="99%" ></div>  
 
 To generate NUM dataset from scratch:
 1. please follow the installation instructions of [splatter-image](https://github.com/szymanowiczs/splatter-image).
@@ -87,7 +87,7 @@ To visualize the uncertain map predicted by UPNet
 cd 08-vit-train
 python visualize_predicted_uncertainty.py
 ```
-<div align=left><img src="data/figures/Fig3.png" width="99%" height="99%" ></div>  
+<div align=left><img src="figures/Fig3.png" width="99%" height="99%" ></div>  
 
 
 ## BibTeX
