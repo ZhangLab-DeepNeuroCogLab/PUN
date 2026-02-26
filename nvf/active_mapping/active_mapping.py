@@ -408,7 +408,7 @@ class ActiveMapper:
         output_dir: str = "", 
         use_uniform: bool = False,
         load_ckpt: bool = False,
-        background_color: Literal["random", "white"] = "random"
+        background_color: Literal["random", "white"] = "random",
     ) -> Float[Tensor, "*batch C H W"]:
         """
         render the images at each pose 

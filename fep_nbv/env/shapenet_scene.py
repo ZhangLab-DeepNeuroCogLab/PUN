@@ -809,6 +809,7 @@ class ShapeNetScene(ShapeNetBlender):
         inst_id = len(self.objects) + 1000
         cone["inst_id"] = inst_id
         self.objects[f'Cone_{id}'] = cone
+        print(f'new cone id is {inst_id}')
 
         # if id>0:
         #     cone = self.objects.get(f'Cone_{id}')
