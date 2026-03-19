@@ -2,8 +2,13 @@
 
 This repository provides the **official implementation** of **_Peering into the Unknown: Active View Selection with Neural Uncertainty Maps for 3D Reconstruction_**.
 
-## [Paper](https://arxiv.org/abs/2506.14856v2) | [Dataset](https://drive.google.com/drive/folders/1LNXUIZFjTFLSvLw81ibHI2YvHdpLshlD?usp=share_link) | [Models](https://drive.google.com/drive/folders/1SmAq_RmEDKGDYT-rVy7YBnEmewmOBIRW?usp=share_link) | [Poster](https://drive.google.com/file/d/1qA3WS7Z3KPYxNYwlfsfKqLNi5yddjg9Q/view?usp=share_link) | Presentation *(coming soon)*
+## [Paper](https://arxiv.org/abs/2506.14856v2) | [Dataset](https://drive.google.com/drive/folders/1LNXUIZFjTFLSvLw81ibHI2YvHdpLshlD?usp=share_link) | [Models](https://drive.google.com/drive/folders/1SmAq_RmEDKGDYT-rVy7YBnEmewmOBIRW?usp=share_link) | [Poster](https://drive.google.com/file/d/1qA3WS7Z3KPYxNYwlfsfKqLNi5yddjg9Q/view?usp=share_link) | [Presentation](https://recorder-v3.slideslive.com/?share=108121&s=94a98bb6-8278-4974-8a62-10b4fb450945)
 
+
+## News
+* **[2026/03/19]**: We released the presentation video.
+* **[2026/03/02]**: WWe released all the data and code as well as our poster. The presentation video is still in progress. Please follow the following guidance for installation and usage. If you meet any problems or bugs, welcome to [contact_me](https://scholar.google.com/citations?hl=zh-CN&user=USd4m0QAAAAJ&view_op=list_works&gmla=AF9nlQs6SS8p5LHpA_KW0G9MkI-BOfMk-2nFCueqIG34gZZWgLOKE8SOkO-IKbWtuU9GI06vEDXCjByCo1qbAMPS-K_YDniQdv3Y9V_EVto) or open a [issue](https://github.com/spring520/PUN/issues)
+* **[2026/01/26]**: Our paper is accepted at ICLR 2026!
 
 ## Abstract
 Imagine trying to understand the shape of a teapot by viewing it from the front—you might see the spout, but completely miss the handle. Some perspectives naturally provide more information than others. How can an AI system determine which viewpoint offers the most valuable insight for accurate and efficient 3D object reconstruction? Active view selection (AVS) for 3D reconstruction remains a fundamental challenge in computer vision. The aim is to identify the minimal set of views that yields the most accurate 3D reconstruction.
